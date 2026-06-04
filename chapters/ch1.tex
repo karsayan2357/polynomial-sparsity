@@ -14,3 +14,18 @@ The main problem of concern for this chapter is the following:
            How many evaluations are needed to interpolate a $t$-sparse polynomial $P$ deterministically, if we have the $A^n$-evaluation of $P$?
     \end{problem}
 \end{blackbox}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[>=stealth]
+    \node[draw, rectangle, minimum width=4cm, minimum height=1.2cm, align=center]
+        (bb) {$P(x_1, x_2, \ldots, x_n)$};
+    \draw[->] ([xshift=-3cm]bb.west) -- (bb.west)
+        node[midway, above] {$(\beta_1, \beta_2, \ldots, \beta_n)$};
+    \draw[->] (bb.east) -- ([xshift=3cm]bb.east)
+        node[midway, above] {$P(\beta_1, \beta_2, \ldots, \beta_n)$};
+\end{tikzpicture}
+\caption{Black-box model \textup{\cite{ben-or-tiwari}}.}
+\label{fig:blackbox}
+\end{figure}
+
